@@ -17,10 +17,10 @@ fi
 if git commit -am "$1" ; then
     echo "$(tput setaf 2)2. git commit succesfull$(tput sgr 0)"
 else
-    if git config --global user.email "krisnaputra31@mhs.mdp.ac.id"; then
+    if git config user.email "krisnaputra31@mhs.mdp.ac.id"; then
         echo "$(tput setaf 1)EXPCEPTION HAPPEN TRY TO ADD USER NAME$(tput sgr 0)"
         echo "$(tput setaf 2)adding user.name succesfull$(tput sgr 0)"
-        if git config --global user.name "krisna31"; then
+        if git config user.name "krisna31"; then
             echo "$(tput setaf 1)EXPCEPTION HAPPEN TRY TO ADD USER EMAIL$(tput sgr 0)"
             echo "$(tput setaf 2)adding user.email succesfull$(tput sgr 0)"
         else
