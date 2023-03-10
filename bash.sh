@@ -20,11 +20,9 @@ if git config --global --unset user.name; then
         echo "$(tput setaf 2)5. git unset user.email succesfull$(tput sgr 0)"
     else
         echo "$(tput setaf 1)EXPCEPTION AT GIT UNSET$(tput sgr 0)"
-        exit $0 
     fi
 else
     echo "$(tput setaf 1)EXPCEPTION AT GIT UNSET$(tput sgr 0)"
-    # exit $0 
 fi
 
 if git config --unset user.name; then
@@ -33,11 +31,9 @@ if git config --unset user.name; then
         echo "$(tput setaf 2)5. git unset user.email succesfull$(tput sgr 0)"
     else
         echo "$(tput setaf 1)EXPCEPTION AT GIT UNSET$(tput sgr 0)"
-        exit $0 
     fi
 else
     echo "$(tput setaf 1)EXPCEPTION AT GIT UNSET$(tput sgr 0)"
-    # exit $0 
 fi  
 
 # github commit with messages
@@ -80,11 +76,9 @@ if git config --global --unset user.name; then
         echo "$(tput setaf 2)5. git unset user.email succesfull$(tput sgr 0)"
     else
         echo "$(tput setaf 1)EXPCEPTION AT GIT UNSET$(tput sgr 0)"
-        exit $0 
     fi
 else
     echo "$(tput setaf 1)EXPCEPTION AT GIT UNSET$(tput sgr 0)"
-    exit $0 
 fi    
 
 # delete history
