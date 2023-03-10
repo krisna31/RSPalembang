@@ -13,6 +13,33 @@ else
     exit $0
 fi
 
+# unset all email and name
+if git config --global --unset user.name; then
+    echo "$(tput setaf 2)4. git unset user.name succesfull$(tput sgr 0)"
+    if git config --global --unset user.email; then
+        echo "$(tput setaf 2)5. git unset user.email succesfull$(tput sgr 0)"
+    else
+        echo "$(tput setaf 1)EXPCEPTION AT GIT UNSET$(tput sgr 0)"
+        exit $0 
+    fi
+else
+    echo "$(tput setaf 1)EXPCEPTION AT GIT UNSET$(tput sgr 0)"
+    # exit $0 
+fi
+
+if git config --unset user.name; then
+    echo "$(tput setaf 2)4. git unset user.name succesfull$(tput sgr 0)"
+    if git config --unset user.email; then
+        echo "$(tput setaf 2)5. git unset user.email succesfull$(tput sgr 0)"
+    else
+        echo "$(tput setaf 1)EXPCEPTION AT GIT UNSET$(tput sgr 0)"
+        exit $0 
+    fi
+else
+    echo "$(tput setaf 1)EXPCEPTION AT GIT UNSET$(tput sgr 0)"
+    # exit $0 
+fi  
+
 # github commit with messages
 if git commit -am "$1" ; then
     echo "$(tput setaf 2)2. git commit succesfull$(tput sgr 0)"
