@@ -10,7 +10,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvRumahSakit"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:listitem="@layout/list_item_rumah_sakit" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -21,6 +21,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
+        android:layout_gravity="bottom"
         android:src="@drawable/ic_tambah"
         android:tint="@null" />
 
