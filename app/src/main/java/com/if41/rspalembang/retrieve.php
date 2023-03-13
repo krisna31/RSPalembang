@@ -26,3 +26,6 @@ if ($cek > 0) {
     $respone['kode'] = 0;
     $respone['pesan'] = "Data Tidak Tersedia";
 }
+
+echo json_encode($respone);
+mysqli_close($konek);
