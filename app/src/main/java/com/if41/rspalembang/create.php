@@ -8,7 +8,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $alamat = $_POST["alamat"];
     $telepon = $_POST["telepon"];
 
-    $perintah = "INSERT INTO tblrumahsakitpalembang (nama, alamat,pon) VALUES('$nama', '$alamat', '$telepon')";
+    $perintah = "INSERT INTO tblrumahsakitpalembang (nama, alamat,telepon) VALUES('$nama', '$alamat', '$telepon')";
     $eksekusi = mysqli_query($konek, $perintah);
     $cek = mysqli_affected_rows($konek);
 

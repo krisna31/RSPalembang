@@ -1,6 +1,6 @@
 <?php
 
-require(koneksi.php);
+require('koneksi.php');
 
 $response = array();
 
@@ -10,11 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $alamat = $_POST['alamat'];
     $telepon = $_POST['telepon'];
 
-    $query = "UPDATE tblrumahsakitpalembang 
-    SET nama='$nama',
-    SET alamat='$alamat',
-    SET telepon='$telepon',
-    WHERE id = '$id'";
+    $query = "UPDATE tblrumahsakitpalembang SET nama='$nama',SET alamat='$alamat',SET telepon='$telepon',WHERE id = '$id'";
     $execute = mysqli_query($konek, $query);
     $cek = mysqli_affected_rows($konek);
 
