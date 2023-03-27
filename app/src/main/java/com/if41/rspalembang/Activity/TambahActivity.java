@@ -51,10 +51,8 @@ public class TambahActivity extends AppCompatActivity {
     }
 
     private void tambahRumahSakit() {
-        APIRequestData API =
-                RetroServer.konekRetrofit().create(APIRequestData.class);
-        Call<ModelResponse> proses = API.ardCreate(nama, alamat,
-                telepon);
+        APIRequestData API = RetroServer.konekRetrofit().create(APIRequestData.class);
+        Call<ModelResponse> proses = API.ardCreate(nama, alamat, telepon);
         proses.enqueue(new Callback<ModelResponse>() {
             @Override
             public void onResponse(Call<ModelResponse> call, Response<ModelResponse> response) {
@@ -63,11 +61,9 @@ public class TambahActivity extends AppCompatActivity {
                 Toast.makeText(TambahActivity.this, "Kode: " + kode + "| Pesan: " + pesan, Toast.LENGTH_SHORT).show();
                 finish();
             }
-
             @Override
             public void onFailure(Call<ModelResponse> call, Throwable t) {
-                Toast.makeText(TambahActivity.this, "Gagal menghubungi server :" + t.getMessage(),
-                        Toast.LENGTH_SHORT).show();
+                Toast.makeText(TambahActivity.this, "Gagal menghubungi server :" + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

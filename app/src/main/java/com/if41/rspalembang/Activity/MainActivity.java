@@ -61,8 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void retrieveRumahSakit() {
         pbRumahSakit.setVisibility(View.VISIBLE);
-        APIRequestData API =
-                RetroServer.konekRetrofit().create(APIRequestData.class);
+        APIRequestData API = RetroServer.konekRetrofit().create(APIRequestData.class);
         Call<ModelResponse> proses = API.ardRetrieve();
         proses.enqueue(new Callback<ModelResponse>() {
             @Override
@@ -77,8 +76,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(Call<ModelResponse> call,
-                                  Throwable t) {
+            public void onFailure(Call<ModelResponse> call, Throwable t) {
                 Toast.makeText(MainActivity.this, "Gagal menghubungi server :" + t.getMessage(),
                 Toast.LENGTH_SHORT).show();
                 pbRumahSakit.setVisibility(View.GONE);
