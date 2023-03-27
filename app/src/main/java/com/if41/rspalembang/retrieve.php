@@ -9,9 +9,9 @@ $execute = mysqli_query($konek, $query);
 $cek = mysqli_affected_rows($konek);
 
 if ($cek > 0) {
-    $respone['kode'] = 1;
-    $respone['pesan'] = "Data Tersedia";
-    $respone['Data'] = array();
+    $response['kode'] = 1;
+    $response['pesan'] = "Data Tersedia";
+    $response['data'] = array();
 
     while($ambil = mysqli_fetch_object($execute)) {
         $temp["id"] = $ambil->id;
@@ -23,9 +23,10 @@ if ($cek > 0) {
         array_push($response['data'], $temp);
      }
 } else {
-    $respone['kode'] = 0;
-    $respone['pesan'] = "Data Tidak Tersedia";
+    $response['kode'] = 0;
+    $response['pesan'] = "Data Tidak Tersedia";
 }
 
-echo json_encode($respone);
+echo json_encode($response);
+//var_dump($temp);
 mysqli_close($konek);

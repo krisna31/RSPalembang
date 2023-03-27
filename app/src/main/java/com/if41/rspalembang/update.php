@@ -7,7 +7,7 @@ $response = array();
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $id = $_POST['id'];
     $nama = $_POST['nama'];
-    $alamat = $_POST['telepon'];
+    $alamat = $_POST['alamat'];
     $telepon = $_POST['telepon'];
 
     $query = "UPDATE tblrumahsakitpalembang 
